@@ -76,9 +76,9 @@ void loop() {
 }
 En aquest cas el loop està buit perquè l'objectiu del porgrama és el de inicialitzar la SD i fer la lectura de l'arxiu, cosa que ja es feta al setup i no es necesaria tornarla a fer
 
-Part B
+# Part B
 
-# Codi en Línea
+## Codi en Línea
 
 #include <Arduino.h>
 #include <SPI.h> 
