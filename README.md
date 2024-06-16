@@ -1,5 +1,5 @@
 # PauReyes999-Practica6ProcessadorsDigitals-
-Part A
+## Part A
 
 Codi en Línea
 
@@ -31,21 +31,22 @@ Serial.write(myFile.read());
 void loop() 
 { 
 }
-Explicació del codi
 
-1.Inclusió de llibreries
+## Explicació del codi
+
+## 1.Inclusió de llibreries
 
 #include <Arduino.h>
 #include <SPI.h>
 #include <SD.h>
 Aquí s'inclouen les llibreries, la primera es fa servir per fer servir les funcions bàsiques d'Arduino, la segona per fer servir la comunicació SPI, i l'última per poder treballar amb targetes SD.
 
-2.Variable
+## 2.Variable
 
 File myFile;
 Es declara una variable tipús 'File' anomenada 'myFile' per poder tractar amb l'arxiu a la SD.
 
-3.Setup
+## 3.Setup
 
 void setup() {
   Serial.begin(9600);  // Inicia la comunicación serial a 9600 baudios.
@@ -69,7 +70,7 @@ void setup() {
 }
 En aquest cas la funció 'setup ja està explicada linea per linea al codi, el que fa és que el bus SPI intenta inicialitzar la SD, en cas d'aconseguir-ho abrirà un arxiu anomenat "archivo.txt", llegint-lo i enviant el seu contingut al monitor serial. En cas de fallar es mostrarà un missatge d'error al monitor serial.
 
-4.Loop
+## 4.Loop
 
 void loop() {
 }
@@ -77,7 +78,7 @@ En aquest cas el loop està buit perquè l'objectiu del porgrama és el de inici
 
 Part B
 
-Codi en Línea
+# Codi en Línea
 
 #include <Arduino.h>
 #include <SPI.h> 
@@ -108,27 +109,27 @@ if ( mfrc522.PICC_IsNewCardPresent())
                   // Terminamos la lectura de la tarjeta  actual 
                   mfrc522.PICC_HaltA();  
             }}}
-Explicació del codi
+## Explicació del codi
 
-1.Inclusió de llibreries
+# 1.Inclusió de llibreries
 
 #include <Arduino.h>
 #include <SPI.h>
 #include <MFRC522.h>
 Aquí s'inclouen les mateixes dues primeres llibreries que en la part A d'aquesta mateixa pràctica cambiant només la de la SD per una nova que ens permetrà utilitzar funcions específiques per treballar amb el lector RFID RC522.
 
-2.Definició de pins
+## 2.Definició de pins
 
 #define RST_PIN 9    // Pin 9 para el reset del RC522
 #define SS_PIN 10    // Pin 10 para el SS (SDA) del RC522
 Aquí ja tenim comentaris per saber que és el que volem que faci cada pin dels assignats, significant "SS" al segón la selecció d'esclau.
 
-3.Creació objecte MFRC522
+## 3.Creació objecte MFRC522
 
 MFRC522 mfrc522(SS_PIN, RST_PIN); // Creamos el objeto para el RC522
 Com ja està comentat al codi aquí es crea un objecte de classe 'MFRC522' anomenat 'mfrc522' que és el que farem servir per interactuar amb el lector RFID.
 
-4.Setup
+## 4.Setup
 
 void setup() {
   Serial.begin(9600);    // Iniciamos la comunicación serial
