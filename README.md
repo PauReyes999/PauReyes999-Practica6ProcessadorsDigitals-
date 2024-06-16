@@ -21,7 +21,7 @@ void setup()
   if (myFile) { 
     Serial.println("archivo.txt:"); 
     while (myFile.available()) { 
-Serial.write(myFile.read()); 
+    Serial.write(myFile.read()); 
     } 
     myFile.close(); //cerramos el archivo 
   } else { 
@@ -108,7 +108,7 @@ if ( mfrc522.PICC_IsNewCardPresent())
                   Serial.println(); 
                   // Terminamos la lectura de la tarjeta  actual 
                   mfrc522.PICC_HaltA();  
-            }}}
+  }}}
 ## Explicació del codi
 
 # 1.Inclusió de llibreries
