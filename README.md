@@ -1,4 +1,4 @@
-# Práctica 5: Comunicación SPI con ESP32
+# Práctica 6: Comunicación SPI con ESP32
 
 ## Objetivo
 
